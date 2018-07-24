@@ -4,34 +4,42 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import Img from 'gatsby-image'
 import { rhythm } from '../utils/typography'
-import Feed from './feed';
+
 
 class BlogIndex extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    //const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    
 
     return (
       <div className="container">
-          <Helmet title={siteTitle} />
-          <div>
-            <Bio />
-            <Feed />
-          </div>
-          {/* {posts.map(({ node }) => {
-            const title = get(node, 'frontmatter.title') || node.fields.slug
-            return (
-              <div key={node.fields.slug} className={"blogIndexLi " + node.frontmatter.listingType}>
-                <h3>
-                  <Link to={node.fields.slug}>
+        <Helmet title={siteTitle} />
+        <Bio />
+        {posts.map(({ node }) => {
+          const title = get(node, 'frontmatter.title') || node.fields.slug
+          let featuredImage = ""
+          if (node.frontmatter.featuredImage != null) {
+            featuredImage = <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
+            ;
+          }
+
+          return (
+            <div key={node.fields.slug} className={"blogIndexLi " + node.frontmatter.listingType}>
+              <Link to={node.fields.slug}>
+                {featuredImage}
+                <div className="description">
+                  <h3>
                     {title}
-                  </Link>
-                </h3>
-            <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
-              </div>
-            )
-          })} */}
+                  </h3>
+                  <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
+                </div>
+              </Link>
+            </div>
+          )
+        })}
       </div>
     )
   }
@@ -46,5 +54,31 @@ export const pageQuery = graphql`
         title
       }
     }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMM YYYY")
+            type
+            subtitle
+            title
+            listingType
+            title
+            featuredImage {
+                childImageSharp{
+                    sizes(maxHeight: 300) {
+                        ...GatsbyImageSharpSizes
+                    }
+                }
+            }
+          }
+        }
+      }
+    }
   }
 `
+

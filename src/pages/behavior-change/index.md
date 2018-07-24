@@ -3,6 +3,8 @@ date: "2016-06-21T23:46:37.121Z"
 title: Thinking inside a box
 type: Side Project
 listingType: caseStudy
+featuredImage: "./featured-image.jpg"
+
 ---
 
 95% of our decisions happen without conscious awareness – split-second, impulsive and easily influenced.

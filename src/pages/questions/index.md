@@ -4,6 +4,7 @@ subtitle: "It's popular advice: ask open questions. But how should one go about 
 date: "2018-07-19T23:46:37.121Z"
 type: Notes
 credits: Sam Stephenson, Mum and Shaun
+
 ---
 
 Lorem markdownum ferit stimulos legumque crimina quam, lacertis orbem, qui nunc

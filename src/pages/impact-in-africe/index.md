@@ -3,6 +3,7 @@ title: Making inroads to impact in Africa
 subtitle: Exploratory research in Lusaka, Zambia
 date: "2017-10-10T23:46:37.121Z"
 type: Field Engineering
+
 ---
 
 After 6 weeks of training and practice in Laos, I was tasked to launch a directed search of the opportunity space in Africa. I set off alone in June 2017 on an explorative mission to Lusaka, Zambia. After successfully trialling a reading & writing program in Laos, we were looking to make a first move into Africa – to learn about the needs of people there, and to stress-test our existing programmes in a radically different culture.

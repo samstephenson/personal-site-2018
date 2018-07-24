@@ -9,8 +9,6 @@ import { rhythm } from '../utils/typography'
 class Feed extends React.Component {
   render() {
     const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, `props.data.allMarkdownRemark.edges`)
-    console.log(posts)
 
     return (
       <div>
@@ -35,25 +33,3 @@ class Feed extends React.Component {
 }
 
 export default Feed
-
-export const pageQuery = graphql`
-  query IndexQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMM YYYY")
-            type
-            subtitle
-            title
-            listingType
-          }
-        }
-      }
-    }
-  }
-`

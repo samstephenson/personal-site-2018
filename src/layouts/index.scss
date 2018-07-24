@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-   // background: url(../components/Home/contours.svg) fixed;
+    //background: url(../components/Home/contours.svg) fixed;
     background-size: cover;
 }
 
@@ -14,16 +14,57 @@ a {
     text-decoration: none;
 }
 
+nav {
+    background: white;
+    padding: .6rem 1.5rem .6rem 1.25rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .avatar {
+        height: 1.75rem;
+        display: inline-block;
+        margin: 0 .7rem 0 0;
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    
+    h1 {
+        display: inline-block;
+        margin: 0;
+        //line-break: 2;
+    }
+
+    a, a h1 {
+        color: #8491A5;
+        font-weight: 400;
+        font-size: 0.75rem;
+
+        h1 {
+            color: #454E55;
+            font-weight: 500;
+        }
+    }
+}
+
 .container {
-    max-width: 32rem;
-    margin: 6rem auto;
+    display: grid;
+    grid-template-columns: 1fr 32rem 1fr;
+    grid-gap: 0;
+    row-gap: 0;
+    max-width: 56rem;
+    margin: 4rem auto;
 }
 
 .blogPost {
     display: grid !important;
     margin: 4rem auto;
     grid-template-columns: repeat(12, 1fr);
-    width: 56rem;
+    max-width: 56rem;
 }
 
 .blogPost {
@@ -62,7 +103,7 @@ a {
 
 .CloseButton {
     position: fixed;
-    margin: 1rem;
+    margin: 4rem 1rem 0;
     background: rgba(102, 81, 81, 0.05);
     border-radius: 50%;
     top: 0;
@@ -79,38 +120,79 @@ a {
 }
 
 .bio {
-    margin-bottom: 4rem;
-    grid-column: 3 / -3;
+    background: linear-gradient(to bottom, rgba(22,35,38,.2), rgba(22,35,38,0.2)), url(../components/Home/kathmandu.jpg) no-repeat center;
+    margin: 4rem 0 6rem;
+    grid-column: 1 / -1;
+
+    h1 {
+        margin: 0;
+        font-family: "Tiempos Headline Test", serif;
+        font-weight: 900;
+        font-size: 3.3rem;
+        text-align: center;
+        color: black;
+        mix-blend-mode: screen;
+        background: white;
+    }
+
 }
 
 .blogIndexLi {
     grid-column: 3 / -3;
-    margin: 1.5rem 0;
+    margin: .75rem 0;
     padding-bottom: 1.2em;
     border-bottom: 2px solid #eee;
     
     h3 {
         font-size: 1rem;
         margin-bottom: 0;
-        font-weight: 400;
+        font-weight: 500;
     }
     a {
-        
+        color:#C77A06;
     }
     p {
         color: #999;
         margin: 0;
     }
-
+    
     &.caseStudy {
+        position: relative;
         margin: 2rem -1rem;
         background: #666;
         border-radius: 4px;
-        padding: 8rem 1rem 1rem;
+        padding: 0;
+        overflow: hidden;
 
         a {
             color: white;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
+
+        small {
+            color: rgba(255,255,255,0.5)
+        }
+
+        .gatsby-image-outer-wrapper {
+            margin: 0;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-image: linear-gradient(to bottom, rgba(22,35,38,.6), rgba(22,35,38,0.6));
+            }
+        }
+
+        .description {
+            display: inline-block;
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+        }
+        
     }
 }
 
@@ -120,21 +202,9 @@ small {
     color:#999;
 }
 
-.header {
-    margin-bottom: 2rem;
-    font-size: 3rem;
-    display: inline-block;
-    font-family: "FFErikRightHand";
-    text-transform: uppercase;
-
-    a {
-        text-decoration: none;
-        color: #000;
-    }
-}
-
 h1 {
     margin-top: 4rem;
+    color: #222;
     
     &.postTitle {
         font-size: 2.8rem;
@@ -145,6 +215,29 @@ h4 {
     font-size: 1.4rem;
     line-height: 1.5;
     color: #8491A5;
-    font-weight: normal;
-    margin-bottom: 3rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+.nextPrevious {
+    grid-column: 3 / -3;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    grid-gap: 2rem;
+    margin: 0;
+
+    li {
+        border: 1px solid #ddd;
+        
+        &:last-child {
+            text-align: right;
+        }
+    
+        a {
+        display: block;
+        padding: 1rem;
+        border-radius: 2px;
+        }
+    }
 }

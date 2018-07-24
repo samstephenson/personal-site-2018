@@ -3,6 +3,8 @@ date: "2016-06-20T23:46:37.121Z"
 title: Seesaw
 type: Case Study
 listingType: caseStudy
+featuredImage: "./featured-image.jpg"
+
 ---
 
 **Keeping track of who-owes-who-what** situations is difficult. Paying bills among housemates, settling up for dinner, or borrowing cash from a friend – it’s easy to lose track of things or get in a muddle over money.

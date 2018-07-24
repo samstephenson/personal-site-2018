@@ -3,6 +3,8 @@ date: "2017-01-15T23:46:37.121Z"
 title: Designing Reali for Android
 type: Case Study
 listingType: caseStudy
+featuredImage: "./featured-image.jpg"
+
 ---
 
 Reali is an end-to-end home buying & selling app. With it, users can find their dream home, schedule app-guided open houses, get pre-approved, place offers on a home and complete deals—all from their iPhone.

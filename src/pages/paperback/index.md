@@ -4,7 +4,7 @@ subtitle: A minimal theme for Workflowy on the web
 date: "2018-03-10T23:46:37.121Z"
 type: Product Design
 listingType: caseStudy
-coverImage: paperbackCoverImage.png
+featuredImage: "./featured-image.jpg"
 ---
 
 <img alt="Paperback desktop app concept" src="WorkFlowy-Mac-preview.png" class="imgFullWidth" style="grid-column: 1/-1;"/>
