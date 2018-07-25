@@ -22,8 +22,11 @@ class BlogIndex extends React.Component {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           let featuredImage = ""
           if (node.frontmatter.featuredImage != null) {
-            featuredImage = <Img sizes={node.frontmatter.featuredImage.childImageSharp.sizes} />
-            ;
+            featuredImage = (
+              <div className="featuredImage">
+                <img src={node.frontmatter.featuredImage.publicURL} />
+              </div>
+            );
           }
 
           return (
@@ -69,11 +72,7 @@ export const pageQuery = graphql`
             listingType
             title
             featuredImage {
-                childImageSharp{
-                    sizes(maxHeight: 300) {
-                        ...GatsbyImageSharpSizes
-                    }
-                }
+              publicURL
             }
           }
         }

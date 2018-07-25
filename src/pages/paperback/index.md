@@ -4,7 +4,7 @@ subtitle: A minimal theme for Workflowy on the web
 date: "2018-03-10T23:46:37.121Z"
 type: Product Design
 listingType: caseStudy
-featuredImage: "./featured-image.jpg"
+featuredImage: "./featured-image.gif"
 when: March 2018 – Present
 what: Design, Prototyping, Front-end development
 buttonURL: https://goo.gl/qWbS7a
