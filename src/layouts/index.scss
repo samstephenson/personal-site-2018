@@ -42,7 +42,7 @@ nav {
     a, a h1 {
         color: #8491A5;
         font-weight: 400;
-        font-size: 0.75rem;
+        font-size: 0.87rem;
 
         h1 {
             color: #454E55;
@@ -56,14 +56,14 @@ nav {
     grid-template-columns: 1fr 32rem 1fr;
     grid-gap: 0;
     row-gap: 0;
-    max-width: 56rem;
+    max-width: 48rem;
     margin: 4rem auto;
 }
 
 .blogPost {
     display: grid !important;
-    margin: 4rem auto;
-    grid-template-columns: repeat(12, 1fr);
+    margin: 2rem auto 4rem;
+    grid-template-columns: 1fr 32rem 1fr;
     max-width: 56rem;
 }
 
