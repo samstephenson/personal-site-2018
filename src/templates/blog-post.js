@@ -4,6 +4,7 @@ import Link from 'gatsby-link'
 import get from 'lodash/get'
 
 import CTA from '../components/CTA'
+import PostMetadata from '../components/PostMetadata'
 import CloseButton from '../components/CloseButton'
 import Feed from '../pages/feed'
 import { rhythm, scale } from '../utils/typography'
@@ -19,7 +20,10 @@ class BlogPostTemplate extends React.Component {
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
           <h1 className="postTitle">{post.frontmatter.title}</h1>
           <h4>{post.frontmatter.subtitle}</h4>
-          <p><small>{post.frontmatter.when}</small><br/><small>{post.frontmatter.what}</small></p>
+          <PostMetadata 
+            when={post.frontmatter.when} 
+            what={post.frontmatter.what}
+          />
           <CTA
             url={post.frontmatter.buttonURL}
             buttonText={post.frontmatter.buttonText}

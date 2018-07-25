@@ -7,13 +7,21 @@ class CTA extends React.Component {
   render() {
     let buttonURL = this.props.url
     let buttonText = this.props.buttonText
-
-    return (
-      <a href={buttonURL} title={buttonText}>
+    let CTA
+    if (buttonURL && buttonText) {
+      CTA = (
+        <a href={buttonURL} title={buttonText}>
         <button className="CTA">
           {buttonText}
         </button>
-      </a>
+        </a>
+      )
+    } else {
+      console.log("CTA button is missing a URL or text in post frontmatter")
+    }
+
+    return (
+      <div>{CTA}</div>
     )
   }
 }

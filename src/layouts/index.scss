@@ -219,6 +219,13 @@ h4 {
     margin-bottom: 2rem;
 }
 
+.postMetadata {
+    small {
+        display: block;
+        margin-bottom: .5rem
+    }
+}
+
 .nextPrevious {
     grid-column: 3 / -3;
     display: grid;
