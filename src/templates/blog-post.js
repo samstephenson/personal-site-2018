@@ -19,6 +19,7 @@ class BlogPostTemplate extends React.Component {
           <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
           <h1 className="postTitle">{post.frontmatter.title}</h1>
           <h4>{post.frontmatter.subtitle}</h4>
+          <p><small>{post.frontmatter.when}</small><br/><small>{post.frontmatter.what}</small></p>
           <p>{post.frontmatter.type}</p>
           <div className="blogPostInner" dangerouslySetInnerHTML={{ __html: post.html }} />
           <div className="footnotes">
@@ -67,6 +68,8 @@ export const pageQuery = graphql`
         subtitle
         date(formatString: "MMMM DD, YYYY")
         credits
+        when
+        what
       }
     }
   }

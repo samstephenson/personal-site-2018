@@ -5,6 +5,9 @@ date: "2018-03-10T23:46:37.121Z"
 type: Product Design
 listingType: caseStudy
 featuredImage: "./featured-image.jpg"
+when: March 2018 – Present
+what: Design, Prototyping, Front-end development
+
 ---
 
 <img alt="Paperback desktop app concept" src="WorkFlowy-Mac-preview.png" class="imgFullWidth" style="grid-column: 1/-1;"/>
