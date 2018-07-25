@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 
-import Bio from '../components/Bio'
+import CTA from '../components/CTA'
 import CloseButton from '../components/CloseButton'
 import Feed from '../pages/feed'
 import { rhythm, scale } from '../utils/typography'
@@ -20,6 +20,10 @@ class BlogPostTemplate extends React.Component {
           <h1 className="postTitle">{post.frontmatter.title}</h1>
           <h4>{post.frontmatter.subtitle}</h4>
           <p><small>{post.frontmatter.when}</small><br/><small>{post.frontmatter.what}</small></p>
+          <CTA
+            url={post.frontmatter.buttonURL}
+            buttonText={post.frontmatter.buttonText}
+          />
           <p>{post.frontmatter.type}</p>
           <div className="blogPostInner" dangerouslySetInnerHTML={{ __html: post.html }} />
           <div className="footnotes">
@@ -70,6 +74,8 @@ export const pageQuery = graphql`
         credits
         when
         what
+        buttonURL
+        buttonText
       }
     }
   }

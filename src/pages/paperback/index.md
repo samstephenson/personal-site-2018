@@ -7,6 +7,8 @@ listingType: caseStudy
 featuredImage: "./featured-image.jpg"
 when: March 2018 – Present
 what: Design, Prototyping, Front-end development
+buttonURL: https://goo.gl/qWbS7a
+buttonText: Try it out on Chrome
 
 ---
 
