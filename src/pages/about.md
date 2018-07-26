@@ -4,7 +4,6 @@ subtitle: "It's popular advice: ask open questions. But how should one go about 
 date: "2014-07-19T23:46:37.121Z"
 type: Notes
 credits: Sam Stephenson, Mum and Shaun
-featuredImage: "./featured-image.jpg"
 
 ---
 

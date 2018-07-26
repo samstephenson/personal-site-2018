@@ -50,6 +50,8 @@ class BlogIndex extends React.Component {
 
 export default BlogIndex
 
+// If this throws up an error saying 'featured image is not a string'.. Double & triple check that there are no references being made to images/files that don't exist. Check page folders and the root 'pages' folder.
+
 export const pageQuery = graphql`
   query IndexQuery {
     site {
@@ -72,7 +74,7 @@ export const pageQuery = graphql`
             listingType
             title
             featuredImage {
-              publicURL
+                publicURL
             }
           }
         }
