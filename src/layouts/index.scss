@@ -8,8 +8,9 @@ html, body {
 }
 
 body {
-    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)) fixed, url(../components/Home/contours.svg) fixed;
+    //background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1)) fixed, url(../components/Home/contours.svg) fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 a {
@@ -24,6 +25,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    z-index: 1000;
 
     .avatar {
         height: 1.75rem;
@@ -54,7 +56,7 @@ nav {
     }
 }
 
-.container {
+.container, .footnotes {
     display: grid;
     grid-template-columns: 1fr 32rem 1fr;
     grid-gap: 0;
@@ -63,40 +65,66 @@ nav {
     margin: 4rem auto;
 }
 
-.blogPost {
+.blogPostInner {
     display: grid !important;
     margin: 2rem auto 4rem;
-    grid-template-columns: 1fr 32rem 1fr;
+    grid-template-columns: 1fr 1fr 17rem 17rem 1fr 1fr;
     max-width: 56rem;
-}
 
-.blogPost {
     > * {
         grid-column: 3 / -3;
     }
 
-    .blogPostInner {
-        display: contents;
-
-        > * {
-            grid-column: 3 / -3;
-        }
-
-        .gatsby-resp-image-link {
-            grid-column: 1 / -1;
-            margin-bottom: 2rem;
-        }
-
-        .gatsby-resp-image-wrapper {
-            max-width: auto;
-        }
-
+    .gatsby-resp-image-link {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
     }
-    
+
+    .gatsby-resp-image-wrapper {
+        max-width: auto;
+    }
+}
+
+.postFrontmatter {
+    width: 34rem;
+    margin: 4rem auto;
+}
+
+.blogPost.caseStudy .postFrontmatter {
+    margin: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr 20fr 1fr;
+    column-gap: 2rem;
+    width: 100%;
+    overflow:hidden;
+
+    h1 {
+        margin-top: 0;
+    }
+
+    > div {
+        margin: auto 0;
+    }
+
+    > * {
+        grid-column: 2 / -3;
+    }
+
+    .splashImage {
+        grid-column: 3 / -2;
+        overflow: hidden;
+        
+        > * {
+        }
+    }
 }
 
 .footnotes {
-    margin: 2rem 0 4rem;
+    margin: 2rem auto 4rem;
+    
+    > * {
+        grid-column: 2 / -2;
+    }
 
     p {
         margin-bottom: 0;
@@ -106,8 +134,8 @@ nav {
 
 .CloseButton {
     position: fixed;
-    margin: 4rem 1rem 0;
-    background: rgba(102, 81, 81, 0.05);
+    margin: 1rem 1rem 0;
+    border: 2px solid #aaa;
     border-radius: 50%;
     top: 0;
 
@@ -123,18 +151,16 @@ nav {
 }
 
 .bio {
-    background: linear-gradient(to bottom, rgba(22,35,38,.2), rgba(22,35,38,0.2)), url(../components/Home/kathmandu.jpg) no-repeat center;
+    //background: linear-gradient(to bottom, rgba(22,35,38,.2), rgba(22,35,38,0.2)), url(../components/Home/kathmandu.jpg) no-repeat center;
     margin: 4rem 0 6rem;
-    grid-column: 1 / -1;
+    grid-column: 3 / -3;
 
     h1 {
         margin: 0;
-        font-family: "Tiempos Headline Test", serif;
+        font-family: "Minion Pro", serif;
         font-weight: 900;
-        font-size: 3.3rem;
-        text-align: center;
+        font-size: 2rem;
         color: black;
-        mix-blend-mode: screen;
         background: white;
     }
 
@@ -144,19 +170,25 @@ nav {
     grid-column: 3 / -3;
     margin: .75rem 0;
     padding-bottom: 1.2em;
-    border-bottom: 2px solid #eee;
+    //border-bottom: 2px solid #eee;
     
     h3 {
         font-size: 1rem;
-        margin-bottom: 0;
-        font-weight: 500;
+        margin-bottom: .5rem;
+        font-weight: 400;
+        display: inline-block;
+        border-bottom: 1px solid #aaa;
     }
     a {
-        color:$colorLink;
+        color:black;
     }
     p {
-        color: #999;
+        color: #aaa;
         margin: 0;
+    }
+
+    small {
+        display: block;
     }
     
     &.caseStudy {
@@ -166,10 +198,10 @@ nav {
         border-radius: 4px;
         padding: 0;
         overflow: hidden;
+        border: none;
 
         a {
             color: white;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.2);
         }
 
         small {
@@ -261,14 +293,17 @@ h4 {
 }
 
 button {
-    padding: .25rem 1rem;
-    background: none;
-    border: 2px solid #ddd;
+    color: white;
+    padding: .5rem 2rem;
+    background: $colorLink;
+    border: none;
     border-radius: 1rem;
-    transition: 0.05s ease-out;
+    transition: 0.1s ease-in-out;
+    margin-left: -3px;
     cursor: pointer;
+    box-shadow: 0 0px 4px rgba(0,0,0,0);
 
     &:hover {
-        transform: scale(1) translateY(-1px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     }
 }

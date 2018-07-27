@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import PageTransition from 'gatsby-plugin-page-transitions'
+
 
 import Bio from '../components/Bio'
 import Img from 'gatsby-image'
@@ -15,35 +17,37 @@ class BlogIndex extends React.Component {
     
 
     return (
-      <div className="container">
-        <Helmet title={siteTitle} />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          let featuredImage = ""
-          if (node.frontmatter.featuredImage != null) {
-            featuredImage = (
-              <div className="featuredImage">
-                <img src={node.frontmatter.featuredImage.publicURL} />
-              </div>
-            );
-          }
-
-          return (
-            <div key={node.fields.slug} className={"blogIndexLi " + node.frontmatter.listingType}>
-              <Link to={node.fields.slug}>
-                {featuredImage}
-                <div className="description">
-                  <h3>
-                    {title}
-                  </h3>
-                  <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
+      <PageTransition transitionTime={100}>
+        <div className="container">
+          <Helmet title={siteTitle} />
+          <Bio />
+          {posts.map(({ node }) => {
+            const title = get(node, 'frontmatter.title') || node.fields.slug
+            let featuredImage = ""
+            if (node.frontmatter.featuredImage != null) {
+              featuredImage = (
+                <div className="featuredImage">
+                  <img src={node.frontmatter.featuredImage.publicURL} />
                 </div>
-              </Link>
-            </div>
-          )
-        })}
-      </div>
+              );
+            }
+
+            return (
+              <div key={node.fields.slug} className={"blogIndexLi " + node.frontmatter.listingType}>
+                <Link to={node.fields.slug}>
+                  {featuredImage}
+                  <div className="description">
+                    <h3>
+                      {title}
+                    </h3>
+                    <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
+                  </div>
+                </Link>
+              </div>
+            )
+          })}
+        </div>
+      </PageTransition>
     )
   }
 }
