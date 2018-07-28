@@ -18,46 +18,68 @@ We set out with 3 big questions:
 
 On day 1, I attended an event put on by a local non-profit. I interviewed many of the attendees, and made connections with several non-profits who later provided valuable introductions to schools and interesting people. Following this, first days were spent getting a lay of the land. Walking town, scouting out schools, following up connections made and conducting interviews to understand the macro-economic situation.
 
+<div class="grid threeCol">
+    <div><img alt="exploration" src="./ngombe-schoolkids.jpg" /><em>Exploration</em></div>
+    <div><img alt="Interviews" src="./banana-stand.jpg" /><em>Conducting interviews</em></div>
+    <div><img alt="exploration" src="./chibolya-class-03.jpg" /><em>Visiting schools and observing classes</em></div>
+</div>
+
 Through connections with other non-profits, I was able to be guided around the lower-income ‘compounds’, visiting homes and local businesses getting an insight into the lives of ordinary people. These non-profits also allowed access to schools early on. With this, I could interview directors and spend time in classrooms – observing teaching methods and running class-wide diagnostics. Such exercises revealed information on students’ economic situations and aspirations, and surfaced useful indicators of writing and reasoning ability.
+
+![Visiting a class in Chibolya compound](./chibolya-class-01.jpg)
 
 # Focusing
 
 About 1 week in, I’d learnt enough to know what schools might be viable, and have some ideas about where we might be most effective. The majority of Lusaka’s low-income families live in the compounds: densely packed shanty towns scattered around the city outskirts. Most of these cannot afford government secondary schools. Instead they send their children to community schools: private, community-run schools, funded largely by donors and outside aid. As well as being worthy places to invest time, these were much more receptive to my presence, welcoming outside help.
 
+<div class="grid twoCol">
+    <img alt="ngombe shopfront" src="./ngombe-shopfront.jpg" />
+    <img alt="selling charcoal in ngombe" src="./ngombe-charcoal.jpg" />
+</div>
+
 I narrowed my focus to a single area, Ng’ombe compound. A shanty town on the North side of Lusaka. Its constituents represent the lower income majority of Lusaka, a demographic most in need of better education. Its large quantity of community schools also gave easy, welcome access to classrooms – maximising productive time spent running experiments.
 
 With a shortlist of candidate schools, I could spend more time in classrooms, doing more directed observation and conducting classes to probe students’ skill levels, in areas like business, literacy, reading and speaking.
 
-
-### Business ideas workshops
-Generating business ideas from your family's problems. Presenting them to the class.
-
-### Business ideas workshops
-Generating business ideas from your family's problems. Presenting them to the class.
-
-### Computer lessons
-Gauging students' computer literacy.
-
-### Writing exercises
-Understanding students skill at expressing their ideas and communicating in written English.
+<div class="grid threeCol">
+    <div>
+        <img alt="Business ideas workshop" src="./business-ideas.jpg" /><strong>Business ideas workshops</strong><br><em>Generating business ideas from your family's problems. Presenting them to the class.</em>
+    </div>
+    <div>
+        <img alt="computer lessons" src="./computer-class.jpg" />
+        <strong>Computer lessons</strong><br><em>Gauging students' computer literacy.</em>
+    </div>
+    <div>
+        <img alt="Writing exercises" src="./chibolya-class-02.jpg" />
+        <strong>Writing exercises</strong><br><em>Understanding students skill at expressing their ideas and communicating in written English.</em>
+    </div>
+</div>
 
 ## Testing our existing programmes
 
 Over the following two weeks, my focus increasingly narrowed on two schools: Ng’ombe Open Community School and Aisha Project School. Both allowed me to work closely with a small group of students: Grade 8s, aged 14–16, in one; Grade 12s, aged 18–21, in the other. With these students, I could re-run and test many of the exercises developed in Laos.
 
-### Reading
-Absorbing correct grammar rules and vocabulary.
-
-### Generative writing
-Using mindmaps to generate ideas and plans for your future.
-
-### Speaking with confidence
-Public speaking practice – designed to build a ritual of practicing and acting on feedback.
-
-### Written communication
-Letter writing proved a great way to spark a sense of care in students' writing.
-
-### Writing & prepositions
-Using prepositions to enrich reasoning.
+<div class="grid threeCol">
+    <div>
+        <img alt="Reading" src="./hugo-reading.jpg" />
+        <strong>Reading</strong><br><em>Absorbing correct grammar rules and vocabulary.</em>
+    </div>
+    <div>
+        <img alt="Generative writing" src="./writing-with-flashcards.jpg" />
+        <strong>Generative writing</strong><br><em>Using mindmaps to generate ideas and plans for your future.</em>
+    </div>
+    <div>
+        <img alt="Speaking with confidence" src="./speaking-with-confidence.jpg" />
+        <strong>Speaking with confidence</strong><br><em>Public speaking practice – designed to build a ritual of practicing and acting on feedback.</em>
+    </div>
+    <div>
+        <img alt="Written communication" src="./letter-writing.jpg" />
+        <strong>Written communication</strong><br><em>Letter writing proved a great way to spark a sense of care in students' writing.</em>
+    </div>
+    <div>
+        <img alt="Writing with prepositions" src="./productive-struggle.jpg" />
+        <strong>Writing & prepositions</strong><br><em>Using prepositions to enrich reasoning.</em>
+    </div>
+</div>
 
 Throughout the investigation, I’d report back and discuss findings with the team. Each day was a continual process of feeding back information and adjusting course according to what we’d found. When the time came to leave, I flew back to meet the team in London, to decompress a little and figure out next steps. Two weeks later, we were on a plane back to Lusaka for a more development focused trip.

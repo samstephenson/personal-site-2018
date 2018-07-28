@@ -1,47 +1,18 @@
 ---
 title: "Hi, I'm Sam"
-subtitle: "It's popular advice: ask open questions. But how should one go about learning this?"
+subtitle: "A designer from the UK"
 date: "2014-07-19T23:46:37.121Z"
 type: Notes
 credits: Sam Stephenson, Mum and Shaun
 
 ---
 
-Lorem markdownum ferit stimulos legumque crimina quam, lacertis orbem, qui nunc
-miscenda quam hausit omne, scit praedae. Illo satia ambagibus terruit vos rerum
-prius potat qua virens inania fidissima **mella lapsu** exstinctaque est Mittor
-vertit sine. *Legesque* cum Aenea non dona [quies
-per](http://pocula-stolidarum.org/omnes), derant indignave stupuit.
+I'm Sam, a designer from the UK.
 
-1. Aut rogaberis ante quem donisque movit natam
-2. Scythides posset docuique
-3. Habet uterque in nullae Iphis
-4. Ordine age de nate parte
+Currently, I'm researching the state of education in developing countries and designing new education programs, with Applied Cognitive Science. In the past few months, I've worked on projects in Zambia, Ethiopia and Laos.
 
-Moriens gradus. Magni [trabibus](http://pictos.io/quaebracchia.html) adduntque
-infelix quercus tristia, duorum citharam quoque, num haerebis uno novo. Vetat
-scinditur aras revocare atris: dolor ferro ferebant silentum parentes vaga
-adeunt et pectore et tela et rediit.
+Before that, I was based in San Francisco, interning at NewDealDesign﻿ and co-conspiring at the Red Victorian.
 
-## Explorat gerebant ademptae numina
+I studied Graphic Design at Falmouth University in UK.
 
-Aurora in oculos ultaque atria. Plaga dentes. Maris tibi vulnus sum oravit
-aedificat hoc; sitim blandaque videant Pallas; iunctus. Ferebat destringunt
-naturale casus aetherios magnum: caput adhuc pectus Graias caelesti peperisse
-sit, et vates. Novitate alioque ipse talia mucronem **illum nescit** vultum.
-
-- Sit attollo latissima iamque Lycabasque arma seque
-- Spectant pulsant Sigei corpus hostem nuruumque radice
-- Gemini queri iam cum Haemonias ignis fulsit
-- Ligatis exsangue somniferis terras
-- Da tecum ut debueram accessit dea Ismarios
-
-Constitit devastata patriae, ut solio sed: ridet possidet efferre tinguebat ab
-optas notas, in, est! *Votisque Helops Apollo* artes at quereris veluti nostro.
-Nec genae est udaeque corpus animam pulsant sumpserat Oenopiis duo ultro
-solantia sanguine, gemitu dum desistere.
-
-Indis accipe omnis, loci et cursu quaeque terrae, [vultus](http://www.ulla.com/)
-init victorque, mittor. Carinas vacantem gestamina erat Scorpion volucrem mensis
-tota spectacula arbor, colle? Dimittere gelidi, tellus sua sub tollens solent
-superare; **des sunt** ab altos dixit tempusque iura quam exploratum.
+If not at work – I'm hopefully somewhere on water or in the mountains. Kayaking, surfing, climbing, or hiking.

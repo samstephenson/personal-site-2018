@@ -1,4 +1,4 @@
-$colorLink: rgb(212, 107, 46);
+$colorLink: tomato;
 
 
 html, body {
@@ -18,6 +18,12 @@ a {
     text-decoration: none;
 }
 
+.avatar {
+    height: 4rem;
+    display: inline-block;
+    margin: 0 0 2rem -2px;
+}
+
 nav {
     background: white;
     padding: .6rem 1.5rem .6rem 1.25rem;
@@ -26,12 +32,6 @@ nav {
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-
-    .avatar {
-        height: 1.75rem;
-        display: inline-block;
-        margin: 0 .7rem 0 0;
-    }
 
     .header {
         display: flex;
@@ -56,7 +56,7 @@ nav {
     }
 }
 
-.container, .footnotes {
+.container, .footnotes, .nextPrevious {
     display: grid;
     grid-template-columns: 1fr 32rem 1fr;
     grid-gap: 0;
@@ -69,29 +69,29 @@ nav {
     display: grid !important;
     margin: 2rem auto 4rem;
     grid-template-columns: 1fr 1fr 17rem 17rem 1fr 1fr;
-    max-width: 56rem;
+    width: 100%;
 
     > * {
         grid-column: 3 / -3;
     }
 
-    .gatsby-resp-image-link {
+    > .gatsby-resp-image-link {
         grid-column: 1 / -1;
         margin-bottom: 2rem;
     }
 
-    .gatsby-resp-image-wrapper {
+    > .gatsby-resp-image-wrapper {
         max-width: auto;
     }
 }
 
 .postFrontmatter {
     width: 34rem;
-    margin: 4rem auto;
+    margin: 8rem auto 2rem;
 }
 
 .blogPost.caseStudy .postFrontmatter {
-    margin: 4rem 0;
+    margin: 8rem 0;
     display: grid;
     grid-template-columns: 1fr 10fr 20fr 1fr;
     column-gap: 2rem;
@@ -132,6 +132,8 @@ nav {
 }
 
 
+
+
 .CloseButton {
     position: fixed;
     margin: 1rem 1rem 0;
@@ -152,12 +154,12 @@ nav {
 
 .bio {
     //background: linear-gradient(to bottom, rgba(22,35,38,.2), rgba(22,35,38,0.2)), url(../components/Home/kathmandu.jpg) no-repeat center;
-    margin: 4rem 0 6rem;
+    margin: 2rem 0 6rem;
     grid-column: 3 / -3;
 
     h1 {
         margin: 0;
-        font-family: "Minion Pro", serif;
+        //font-family: "Usual", serif;
         font-weight: 900;
         font-size: 2rem;
         color: black;
@@ -177,10 +179,9 @@ nav {
         margin-bottom: .5rem;
         font-weight: 400;
         display: inline-block;
-        border-bottom: 1px solid #aaa;
+        border-bottom: 1px solid rgba(255,99,71,0.2);
     }
     a {
-        color:black;
     }
     p {
         color: #aaa;
@@ -270,12 +271,10 @@ h4 {
 }
 
 .nextPrevious {
-    grid-column: 3 / -3;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
     list-style: none;
-    grid-gap: 2rem;
-    margin: 0;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+
 
     li {
         border: 1px solid #ddd;
@@ -305,5 +304,25 @@ button {
 
     &:hover {
         box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+}
+
+.grid {
+    grid-column: 2/-2;
+    display: grid;
+    grid-gap: 2rem;
+    margin: 4rem 0;
+
+    &.twoCol {
+        grid-template-columns: 1fr 1fr;
+    }
+    &.threeCol {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &.full {
+        grid-column: 1 / -1;
+        width: 100%;
+        grid-gap: 1rem;
     }
 }

@@ -1,9 +1,13 @@
 ---
 date: "2017-01-15T23:46:37.121Z"
 title: Designing Reali for Android
+subtitle: Reoworking the app for launch on Android
+when: Jan 2017
+what: Design, Prototyping, Front-end development
 type: Case Study
 listingType: caseStudy
 featuredImage: "./featured-image.jpg"
+splashImage: "reali-hero.jpg"
 
 ---
 
