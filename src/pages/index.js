@@ -8,6 +8,7 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 import Bio from '../components/Bio'
 import Img from 'gatsby-image'
 import { rhythm } from '../utils/typography'
+import Nav from '../components/Nav'
 
 
 class BlogIndex extends React.Component {
@@ -21,6 +22,7 @@ class BlogIndex extends React.Component {
         <div className="container">
           <Helmet title={siteTitle} />
           <Bio />
+          <Nav />
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug
             let featuredImage = ""

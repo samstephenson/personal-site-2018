@@ -25,34 +25,22 @@ a {
 }
 
 nav {
-    background: white;
-    padding: .6rem 1.5rem .6rem 1.25rem;
-    border-bottom: 1px solid #eee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 1000;
+    list-style-type: none;
+    grid-column: 2/-2;
+    margin-bottom: 4rem;
+    font-family: "Acumin Pro Wide";
 
-    .header {
-        display: flex;
-        align-items: center;
-    }
-    
-    h1 {
-        display: inline-block;
-        margin: 0;
-        //line-break: 2;
+    a {
+        text-transform: uppercase;
+        color: #aaa;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        margin-right: 2rem;
     }
 
-    a, a h1 {
-        color: #8491A5;
-        font-weight: 400;
-        font-size: 0.87rem;
-
-        h1 {
-            color: #454E55;
-            font-weight: 500;
-        }
+    .active {
+        color: black;
     }
 }
 
@@ -154,7 +142,7 @@ nav {
 
 .bio {
     //background: linear-gradient(to bottom, rgba(22,35,38,.2), rgba(22,35,38,0.2)), url(../components/Home/kathmandu.jpg) no-repeat center;
-    margin: 2rem 0 6rem;
+    margin: 2rem 0 2rem;
     grid-column: 3 / -3;
 
     h1 {
