@@ -36,16 +36,16 @@ class BlogIndex extends React.Component {
 
             return (
               <div key={node.fields.slug} className={"blogIndexLi " + node.frontmatter.listingType}>
-                <Link to={node.fields.slug}>
-                  {featuredImage}
-                  <div className="description">
-                    <h3>
-                      {title}
-                    </h3>
-                    <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
-                  </div>
-                </Link>
-              </div>
+              <Link to={node.fields.slug}>
+                {featuredImage}
+                <div className="description">
+                  <h3>
+                    {title}
+                  </h3>
+                  <small>{node.frontmatter.date}, {node.frontmatter.type}</small>
+                </div>
+              </Link>
+            </div>
             )
           })}
         </div>

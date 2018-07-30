@@ -1,5 +1,9 @@
 $colorLink: tomato;
 
+$widthColumn: 32rem;
+$widthWide: 48rem;
+$widthFull: 100%;
+
 
 html, body {
     margin: 0;
@@ -24,11 +28,29 @@ a {
     margin: 0 0 2rem -2px;
 }
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-.5rem);
+    }
+    60% {
+      transform: translateY(-.25rem);
+    }
+  }
+
 nav {
     list-style-type: none;
     grid-column: 2/-2;
     margin-bottom: 4rem;
     font-family: "Acumin Pro Wide";
+
+    .bouncingArrow {
+        display: inline;
+        margin: 0 .5rem;
+        animation: bounce 3s infinite;
+    }
 
     a {
         text-transform: uppercase;
@@ -37,6 +59,8 @@ nav {
         letter-spacing: 1px;
         font-size: 0.8rem;
         margin-right: 2rem;
+        display: flex;
+        align-items: center;
     }
 
     .active {
@@ -46,17 +70,17 @@ nav {
 
 .container, .footnotes, .nextPrevious {
     display: grid;
-    grid-template-columns: 1fr 32rem 1fr;
+    grid-template-columns: 1fr $widthColumn 1fr;
     grid-gap: 0;
     row-gap: 0;
-    max-width: 48rem;
+    max-width: $widthFull;
     margin: 4rem auto;
 }
 
 .blogPostInner {
     display: grid !important;
     margin: 2rem auto 4rem;
-    grid-template-columns: 1fr 1fr 17rem 17rem 1fr 1fr;
+    grid-template-columns: 1fr 1fr $widthColumn/2 $widthColumn/2 1fr 1fr;
     width: 100%;
 
     > * {
@@ -74,7 +98,7 @@ nav {
 }
 
 .postFrontmatter {
-    width: 34rem;
+    width: $widthColumn;
     margin: 8rem auto 2rem;
 }
 
@@ -83,7 +107,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 10fr 20fr 1fr;
     column-gap: 2rem;
-    width: 100%;
+    width: $widthFull;
     overflow:hidden;
 
     h1 {
@@ -128,6 +152,7 @@ nav {
     border: 2px solid #aaa;
     border-radius: 50%;
     top: 0;
+    z-index: 1000;
 
     a {
         display: flex;
@@ -189,6 +214,10 @@ nav {
         overflow: hidden;
         border: none;
 
+        h3 {
+            border: none;
+        }
+
         a {
             color: white;
         }
@@ -200,7 +229,6 @@ nav {
         .featuredImage {
             max-height: 12rem;
             overflow: hidden;
-            // display: flex;
             position: relative;
         
             img {
@@ -262,7 +290,7 @@ h4 {
     list-style: none;
     grid-template-columns: 1fr 1fr;
     column-gap: 2rem;
-
+    width: $widthColumn;
 
     li {
         border: 1px solid #ddd;
@@ -310,7 +338,7 @@ button {
 
     &.full {
         grid-column: 1 / -1;
-        width: 100%;
+        width: $widthFull;
         grid-gap: 1rem;
     }
 }

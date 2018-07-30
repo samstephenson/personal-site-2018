@@ -6,6 +6,7 @@ import PageTransition from 'gatsby-plugin-page-transitions'
 import Img from 'gatsby-image'
 
 import CTA from '../components/CTA'
+import Footnotes from '../components/Footnotes'
 import PostMetadata from '../components/PostMetadata'
 import CloseButton from '../components/CloseButton'
 import { rhythm, scale } from '../utils/typography'
@@ -25,6 +26,14 @@ class BlogPostTemplate extends React.Component {
     if (post.frontmatter.pageTitle) {
       title = post.frontmatter.pageTitle
     }
+    let featuredImage = ""
+    if (post.frontmatter.featuredImage != null) {
+      featuredImage = (
+        <div className="featuredImage">
+          <img src={post.frontmatter.featuredImage.publicURL} />
+        </div>
+      );
+    }
 
     /*let closeButton = ``
     if (this.props.location.pathname !== rootPath) {
@@ -32,6 +41,7 @@ class BlogPostTemplate extends React.Component {
     }*/
 
     return (
+      <div><CloseButton />
       <PageTransition
         defaultStyle={{
           transition: 'all 100ms ease-out',
@@ -47,7 +57,6 @@ class BlogPostTemplate extends React.Component {
         }}
         transitionTime={200}
       >
-        <CloseButton />
         <div className={"blogPost " + post.frontmatter.listingType}>
             <Helmet title={`${post.frontmatter.title} | ${siteTitle}`} />
             <div className="postFrontmatter">
@@ -69,31 +78,41 @@ class BlogPostTemplate extends React.Component {
               </div>
             </div>
             <div className="blogPostInner" dangerouslySetInnerHTML={{ __html: post.html }} />
-            <div className="footnotes">
-              <p><small>Published {post.frontmatter.date}</small></p>
-              <p><small>Thanks to: {post.frontmatter.credits}</small></p>
-            </div>
+            <Footnotes date ={post.frontmatter.date} credits={post.frontmatter.credits}/>
             
-            <ul className="nextPrevious">
-              <li>
+            <hr />
+
+            <div className="nextPrevious">
+              <h4>Read next:</h4>
                 {
                   previous &&
-                  <Link to={previous.fields.slug} rel="prev">
-                    ← {previous.frontmatter.title}
-                  </Link>
-                }
-              </li>
-              <li>
-                {
+                  <div key={previous.fields.slug} className={"blogIndexLi"}>
+                    <Link to={previous.fields.slug}>
+                      <div className="description">
+                        <h3>
+                          {previous.frontmatter.title}
+                        </h3>
+                        <small>{previous.frontmatter.date}, {previous.frontmatter.type}</small>
+                      </div>
+                    </Link>
+                  </div>
+                } {
                   next &&
-                  <Link to={next.fields.slug} rel="next">
-                    {next.frontmatter.title} →
-                  </Link>
+                   <div key={next.fields.slug} className={"blogIndexLi"}>
+                    <Link to={next.fields.slug}>
+                      <div className="description">
+                        <h3>
+                          {next.frontmatter.title}
+                        </h3>
+                        <small>{next.frontmatter.date}, {next.frontmatter.type}</small>
+                      </div>
+                    </Link>
+                  </div>
                 }
-              </li>
-            </ul>
+            </div>
         </div>
       </PageTransition>
+      </div>
     )
   }
 }

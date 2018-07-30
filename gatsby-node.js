@@ -20,6 +20,12 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   }
                   frontmatter {
                     title
+                    date(formatString: "MMM YYYY")
+                    type
+                    listingType
+                    featuredImage {
+                      publicURL
+                    }
                   }
                 }
               }

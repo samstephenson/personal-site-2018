@@ -1,7 +1,7 @@
 import Typography from 'typography'
 
 const typography = new Typography({
-  baseFontSize: "18px",
+  baseFontSize: "19px",
   baseLineHeight: 1.7,
   headerFontFamily: ['Acumin Pro Wide', 'sans-serif'],
   bodyFontFamily: ['Acumin Pro', 'sans-serif'],

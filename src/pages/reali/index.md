@@ -5,6 +5,7 @@ subtitle: Reoworking the app for launch on Android
 when: Jan 2017
 what: Design, Prototyping, Front-end development
 type: Case Study
+credits: Mum & Dad
 listingType: caseStudy
 featuredImage: "./featured-image.jpg"
 splashImage: "reali-hero.jpg"
