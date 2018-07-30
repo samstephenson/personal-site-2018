@@ -1,14 +1,38 @@
+/* Variables ---------------------------------------------------------------------------------
+|
+|
+*/
+
 $colorLink: tomato;
+$colorKeyline: #ddd;
+$colorBody: #333;
+$colorSecondary: #aaa;
 
 $widthColumn: 32rem;
 $widthWide: 48rem;
 $widthFull: 100%;
 
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-.5rem);
+    }
+    60% {
+      transform: translateY(-.25rem);
+    }
+  }
+
+/* Base ---------------------------------------------------------------------------------
+|
+|
+*/
 
 html, body {
     margin: 0;
     padding: 0;
-    color: #333;
+    color: $colorBody;
 }
 
 body {
@@ -28,18 +52,6 @@ a {
     margin: 0 0 2rem -2px;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateY(-.5rem);
-    }
-    60% {
-      transform: translateY(-.25rem);
-    }
-  }
-
 nav {
     list-style-type: none;
     grid-column: 2/-2;
@@ -54,7 +66,7 @@ nav {
 
     a {
         text-transform: uppercase;
-        color: #aaa;
+        color: $colorSecondary;
         font-weight: 600;
         letter-spacing: 1px;
         font-size: 0.8rem;
@@ -65,6 +77,19 @@ nav {
 
     .active {
         color: black;
+    }
+}
+
+footer {
+    width: $widthFull;
+    border-top: 1px solid $colorKeyline;
+
+    small {
+        display: block;
+        color: $colorSecondary;
+        width: $widthFull;
+        text-align: center;
+        padding: 1rem 1rem;
     }
 }
 
@@ -149,7 +174,7 @@ nav {
 .CloseButton {
     position: fixed;
     margin: 1rem 1rem 0;
-    border: 2px solid #aaa;
+    border: 2px solid $colorSecondary;
     border-radius: 50%;
     top: 0;
     z-index: 1000;
@@ -186,6 +211,19 @@ nav {
     margin: .75rem 0;
     padding-bottom: 1.2em;
     //border-bottom: 2px solid #eee;
+    transition: ease-in-out all 0.1s;
+
+    &:hover {
+        transform: scale(1.005);
+    }
+
+    &:active {
+        transform: scale(0.9);
+    }
+
+    &.caseStudy.featuredImage {
+        transform: scale(1.2);
+    }
     
     h3 {
         font-size: 1rem;
@@ -197,7 +235,7 @@ nav {
     a {
     }
     p {
-        color: #aaa;
+        color: $colorSecondary;
         margin: 0;
     }
 
@@ -233,6 +271,11 @@ nav {
         
             img {
                 width: 100%;
+                //transform: scale(1.05);
+
+                &:hover {
+                    // transform: scale(0.5);
+                }
             }
 
             &:after {
@@ -274,7 +317,7 @@ h1 {
 h4 {
     font-size: 1.2rem;
     line-height: 1.5;
-    color: #aaa;
+    color: $colorSecondary;
     font-weight: 400;
     margin-bottom: 2rem;
 }

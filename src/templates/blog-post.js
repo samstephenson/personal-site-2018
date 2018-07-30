@@ -7,6 +7,7 @@ import Img from 'gatsby-image'
 
 import CTA from '../components/CTA'
 import Footnotes from '../components/Footnotes'
+import Footer from '../components/Footer'
 import PostMetadata from '../components/PostMetadata'
 import CloseButton from '../components/CloseButton'
 import { rhythm, scale } from '../utils/typography'
@@ -111,6 +112,7 @@ class BlogPostTemplate extends React.Component {
                 }
             </div>
         </div>
+        <Footer />
       </PageTransition>
       </div>
     )
