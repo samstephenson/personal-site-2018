@@ -7,6 +7,10 @@
     "url": "https://github.com/gatsbyjs/gatsby-starter-blog/issues"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.0-14",
+    "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
+    "@fortawesome/free-solid-svg-icons": "^5.1.0-11",
+    "@fortawesome/react-fontawesome": "0.1.0-11",
     "@jacobmischka/gatsby-plugin-react-svg": "^1.1.0",
     "gatsby": "^1.9.250",
     "gatsby-image": "^1.0.55",

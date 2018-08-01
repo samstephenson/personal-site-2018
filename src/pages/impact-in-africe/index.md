@@ -19,9 +19,9 @@ We set out with 3 big questions:
 On day 1, I attended an event put on by a local non-profit. I interviewed many of the attendees, and made connections with several non-profits who later provided valuable introductions to schools and interesting people. Following this, first days were spent getting a lay of the land. Walking town, scouting out schools, following up connections made and conducting interviews to understand the macro-economic situation.
 
 <div class="grid threeCol">
-    <div><img alt="exploration" src="./ngombe-schoolkids.jpg" /><em>Exploration</em></div>
-    <div><img alt="Interviews" src="./banana-stand.jpg" /><em>Conducting interviews</em></div>
-    <div><img alt="exploration" src="./chibolya-class-03.jpg" /><em>Visiting schools and observing classes</em></div>
+    <div><img alt="exploration" src="./ngombe-schoolkids.jpg" /><small>Exploration</small></div>
+    <div><img alt="Interviews" src="./banana-stand.jpg" /><small>Conducting interviews</small></div>
+    <div><img alt="exploration" src="./chibolya-class-03.jpg" /><small>Visiting schools and observing classes</small></div>
 </div>
 
 Through connections with other non-profits, I was able to be guided around the lower-income ‘compounds’, visiting homes and local businesses getting an insight into the lives of ordinary people. These non-profits also allowed access to schools early on. With this, I could interview directors and spend time in classrooms – observing teaching methods and running class-wide diagnostics. Such exercises revealed information on students’ economic situations and aspirations, and surfaced useful indicators of writing and reasoning ability.
@@ -43,15 +43,15 @@ With a shortlist of candidate schools, I could spend more time in classrooms, do
 
 <div class="grid threeCol">
     <div>
-        <img alt="Business ideas workshop" src="./business-ideas.jpg" /><strong>Business ideas workshops</strong><br><em>Generating business ideas from your family's problems. Presenting them to the class.</em>
+        <img alt="Business ideas workshop" src="./business-ideas.jpg" /><strong>Business ideas workshops</strong><small>Generating business ideas from your family's problems. Presenting them to the class.</small>
     </div>
     <div>
         <img alt="computer lessons" src="./computer-class.jpg" />
-        <strong>Computer lessons</strong><br><em>Gauging students' computer literacy.</em>
+        <strong>Computer lessons</strong><small>Gauging students' computer literacy.</small>
     </div>
     <div>
         <img alt="Writing exercises" src="./chibolya-class-02.jpg" />
-        <strong>Writing exercises</strong><br><em>Understanding students skill at expressing their ideas and communicating in written English.</em>
+        <strong>Writing exercises</strong><small>Understanding students skill at expressing their ideas and communicating in written English.</small>
     </div>
 </div>
 
@@ -62,23 +62,23 @@ Over the following two weeks, my focus increasingly narrowed on two schools: Ng�
 <div class="grid threeCol">
     <div>
         <img alt="Reading" src="./hugo-reading.jpg" />
-        <strong>Reading</strong><br><em>Absorbing correct grammar rules and vocabulary.</em>
+        <strong>Reading</strong><small>Absorbing correct grammar rules and vocabulary.</small>
     </div>
     <div>
         <img alt="Generative writing" src="./writing-with-flashcards.jpg" />
-        <strong>Generative writing</strong><br><em>Using mindmaps to generate ideas and plans for your future.</em>
+        <strong>Generative writing</strong><small>Using mindmaps to generate ideas and plans for your future.</small>
     </div>
     <div>
         <img alt="Speaking with confidence" src="./speaking-with-confidence.jpg" />
-        <strong>Speaking with confidence</strong><br><em>Public speaking practice – designed to build a ritual of practicing and acting on feedback.</em>
+        <strong>Speaking with confidence</strong><small>Public speaking practice – designed to build a ritual of practicing and acting on feedback.</small>
     </div>
     <div>
         <img alt="Written communication" src="./letter-writing.jpg" />
-        <strong>Written communication</strong><br><em>Letter writing proved a great way to spark a sense of care in students' writing.</em>
+        <strong>Written communication</strong><small>Letter writing proved a great way to spark a sense of care in students' writing.</small>
     </div>
     <div>
         <img alt="Writing with prepositions" src="./productive-struggle.jpg" />
-        <strong>Writing & prepositions</strong><br><em>Using prepositions to enrich reasoning.</em>
+        <strong>Writing & prepositions</strong><small>Using prepositions to enrich reasoning.</small>
     </div>
 </div>
 

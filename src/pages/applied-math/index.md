@@ -16,7 +16,7 @@ Of the Zambian students we work with, roughly 2/3 have some kind of side busines
 - What skills are they missing that might help them grow their businesses?
 - What skills are they missing that provide a way in to formal employment?
 
-![Selling samosas to pay for school fees](./selling-samosas.jpg) <em>Student selling samosas after school, to pay for school fees. In a day's work she'll earn around $2.</em>
+![Selling samosas to pay for school fees](./selling-samosas.jpg) <small>Student selling samosas after school, to pay for school fees. In a day's work she'll earn around $2.</small>
 
 ## General Diagnosis
 We started by deconstructing applied math into its constituent component skills – making educated guesses from our observations about where students’ skill gaps might be.

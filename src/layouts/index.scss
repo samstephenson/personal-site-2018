@@ -11,20 +11,28 @@ $colorSecondary: #aaa;
 $widthColumn: 32rem;
 $widthWide: 48rem;
 $widthFull: 100%;
+$screenPadding: 1rem;
+
+$breakpoint: $widthColumn * 1.2;
+
+/*@media only screen and (max-width: 640px) {
+    $widthColumn: 100% !global;
+    $screenPadding: 1rem !global;
+}*/
 
 @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
+    0%, 100% {
       transform: translateY(0);
     }
-    40% {
+    80% {
       transform: translateY(-.5rem);
     }
-    60% {
+    40% {
       transform: translateY(-.25rem);
     }
   }
 
-/* Base ---------------------------------------------------------------------------------
+  /* Base ---------------------------------------------------------------------------------
 |
 |
 */
@@ -41,153 +49,48 @@ body {
     overflow-x: hidden;
 }
 
+/* Type ---------------------------------------------------------------------------------
+|
+|
+*/
+
+small {
+    line-height: 1.4;
+    margin: 0;
+    color:#999;
+}
+
+h1 {
+    margin: 4rem 0 1rem;
+    color: #222;
+    
+    &.postTitle {
+        font-size: 2rem;
+    }
+}
+
+h4 {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: $colorSecondary;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
 a {
     color: $colorLink;
     text-decoration: none;
 }
 
+/* Homepage ---------------------------------------------------------------------------------
+|
+|
+*/
+
 .avatar {
     height: 4rem;
     display: inline-block;
     margin: 0 0 2rem -2px;
-}
-
-nav {
-    list-style-type: none;
-    grid-column: 2/-2;
-    margin-bottom: 4rem;
-    font-family: "Acumin Pro Wide";
-
-    .bouncingArrow {
-        display: inline;
-        margin: 0 .5rem;
-        animation: bounce 3s infinite;
-    }
-
-    a {
-        text-transform: uppercase;
-        color: $colorSecondary;
-        font-weight: 600;
-        letter-spacing: 1px;
-        font-size: 0.8rem;
-        margin-right: 2rem;
-        display: flex;
-        align-items: center;
-    }
-
-    .active {
-        color: black;
-    }
-}
-
-footer {
-    width: $widthFull;
-    border-top: 1px solid $colorKeyline;
-
-    small {
-        display: block;
-        color: $colorSecondary;
-        width: $widthFull;
-        text-align: center;
-        padding: 1rem 1rem;
-    }
-}
-
-.container, .footnotes, .nextPrevious {
-    display: grid;
-    grid-template-columns: 1fr $widthColumn 1fr;
-    grid-gap: 0;
-    row-gap: 0;
-    max-width: $widthFull;
-    margin: 4rem auto;
-}
-
-.blogPostInner {
-    display: grid !important;
-    margin: 2rem auto 4rem;
-    grid-template-columns: 1fr 1fr $widthColumn/2 $widthColumn/2 1fr 1fr;
-    width: 100%;
-
-    > * {
-        grid-column: 3 / -3;
-    }
-
-    > .gatsby-resp-image-link {
-        grid-column: 1 / -1;
-        margin-bottom: 2rem;
-    }
-
-    > .gatsby-resp-image-wrapper {
-        max-width: auto;
-    }
-}
-
-.postFrontmatter {
-    width: $widthColumn;
-    margin: 8rem auto 2rem;
-}
-
-.blogPost.caseStudy .postFrontmatter {
-    margin: 8rem 0;
-    display: grid;
-    grid-template-columns: 1fr 10fr 20fr 1fr;
-    column-gap: 2rem;
-    width: $widthFull;
-    overflow:hidden;
-
-    h1 {
-        margin-top: 0;
-    }
-
-    > div {
-        margin: auto 0;
-    }
-
-    > * {
-        grid-column: 2 / -3;
-    }
-
-    .splashImage {
-        grid-column: 3 / -2;
-        overflow: hidden;
-        
-        > * {
-        }
-    }
-}
-
-.footnotes {
-    margin: 2rem auto 4rem;
-    
-    > * {
-        grid-column: 2 / -2;
-    }
-
-    p {
-        margin-bottom: 0;
-    }
-}
-
-
-
-
-.CloseButton {
-    position: fixed;
-    margin: 1rem 1rem 0;
-    border: 2px solid $colorSecondary;
-    border-radius: 50%;
-    top: 0;
-    z-index: 1000;
-
-    a {
-        display: flex;
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    
-    img   {
-        margin: auto;
-    }
 }
 
 .bio {
@@ -204,6 +107,61 @@ footer {
         background: white;
     }
 
+}
+
+nav {
+    list-style-type: none;
+    grid-column: 2/-2;
+    margin-bottom: 4rem;
+    font-family: "Acumin Pro Wide";
+    display: flex;
+    align-items: center;
+
+    .bouncingArrow {
+        display: inline;
+        margin: 0 .5rem;
+        animation: bounce 3s infinite;
+        position: relative;
+        top: -2px;
+    }
+
+    > a {
+        text-transform: uppercase;
+        color: $colorSecondary;
+        font-weight: 600;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
+        margin-right: 1rem;
+        display: inline-flex;
+        align-items: center;
+        line-height: 2.2;
+        position: relative;
+        top: 2px;
+    }
+
+    .active {
+        color: black;
+    }
+}
+
+.socialIcons {
+    display: inline-flex;
+
+    a {
+        opacity: 0.25;
+        height: 1rem;
+        margin: 0 1rem 0 0;
+        transition: all 0.1s ease-in-out;
+
+        &:hover { 
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    }
+    
+    img {
+        height: 1rem;
+    }
 }
 
 .blogIndexLi {
@@ -299,27 +257,90 @@ footer {
     }
 }
 
-small {
-    line-height: 1;
-    margin: 0;
-    color:#999;
-}
+/* Post ---------------------------------------------------------------------------------
+|
+|
+*/
 
-h1 {
-    margin: 4rem 0 1rem;
-    color: #222;
-    
-    &.postTitle {
-        font-size: 2rem;
+.blogPostInner {
+    display: grid !important;
+    margin: 2rem auto 4rem;
+    grid-template-columns: 1fr 1fr $widthColumn/2 $widthColumn/2 1fr 1fr;
+    width: 100%;
+
+    @media only screen and (max-width: $breakpoint) {
+        width: $widthFull;
+        grid-template-columns: 1fr 1fr $widthFull 1fr 1fr;
+        padding: 0 $screenPadding;
+    }
+
+    > * {
+        grid-column: 3 / -3;
+    }
+
+    > .gatsby-resp-image-link {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+    }
+
+    > .gatsby-resp-image-wrapper {
+        max-width: auto;
     }
 }
 
-h4 {
-    font-size: 1.2rem;
-    line-height: 1.5;
-    color: $colorSecondary;
-    font-weight: 400;
-    margin-bottom: 2rem;
+.postFrontmatter {
+    width: $widthColumn;
+    margin: 8rem auto 2rem;
+
+    @media only screen and (max-width: $breakpoint) {
+        width: $widthFull;
+        padding: 0 $screenPadding;
+    }
+}
+
+.blogPost.caseStudy .postFrontmatter {
+    margin: 8rem 0;
+    display: grid;
+    grid-template-columns: 1fr 10fr 20fr 1fr;
+    column-gap: 2rem;
+    width: $widthFull;
+    overflow:hidden;
+
+    > * {
+        grid-column: 2 / -3;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+
+    > div {
+        margin: auto 0;
+    }
+
+    .splashImage {
+        grid-column: 3 / -2;
+        overflow: hidden;
+    }
+
+    @media only screen and (max-width: $breakpoint) {
+        grid-template-columns: $widthFull;
+        width: $widthFull;
+
+        > * {
+            grid-column: 1 / -1;
+        }
+
+        .splashImage {
+            grid-column: 1 / -1;
+        }
+    }
+}
+
+.gatsby-resp-image-link + small, .gatsby-resp-image-link + strong {
+    display: block;
+    line-height: 1.2;
+    margin-top: .5rem;
 }
 
 .postMetadata {
@@ -329,11 +350,22 @@ h4 {
     }
 }
 
+.footnotes {
+    margin: 2rem auto 4rem;
+    
+    > * {
+        grid-column: 2 / -2;
+    }
+
+    p {
+        margin-bottom: 0;
+    }
+}
+
 .nextPrevious {
     list-style: none;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 2rem;
     width: $widthColumn;
+    margin: 2rem auto;
 
     li {
         border: 1px solid #ddd;
@@ -348,7 +380,36 @@ h4 {
         border-radius: 2px;
         }
     }
+
+    @media only screen and (max-width: $breakpoint) {
+        width: $widthFull;
+        padding: 0 $screenPadding;
+    }
 }
+
+/* Footer ---------------------------------------------------------------------------------
+|
+|
+*/
+
+footer {
+    width: $widthFull;
+    border-top: 1px solid $colorKeyline;
+    padding: $screenPadding;
+
+    small {
+        display: block;
+        color: $colorSecondary;
+        width: $widthFull;
+        text-align: center;
+        padding: 1rem 1rem;
+    }
+}
+
+/* Components ---------------------------------------------------------------------------------
+|
+|
+*/
 
 button {
     color: white;
@@ -366,6 +427,52 @@ button {
     }
 }
 
+.CloseButton {
+    position: fixed;
+    margin: 1rem 1rem 0;
+    border: 2px solid $colorSecondary;
+    border-radius: 50%;
+    top: 0;
+    z-index: 1000;
+
+    a {
+        display: flex;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    img   {
+        margin: auto;
+    }
+
+    @media only screen and (max-width: $breakpoint) {
+        a {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+/* Layout ---------------------------------------------------------------------------------
+|
+|
+*/
+
+.container, .footnotes {
+    display: grid;
+    grid-template-columns: 1fr $widthColumn 1fr;
+    grid-gap: 0;
+    row-gap: 0;
+    max-width: $widthColumn;
+    margin: 4rem auto;
+
+    @media only screen and (max-width: $breakpoint) {
+        width: $widthFull;
+        grid-template-columns: 1fr $widthFull 1fr;
+        padding: 0 $screenPadding;
+    }
+}
+
 .grid {
     grid-column: 2/-2;
     display: grid;
@@ -374,9 +481,25 @@ button {
 
     &.twoCol {
         grid-template-columns: 1fr 1fr;
+
+        small, strong {
+            display: block;
+        }
+
+        @media only screen and (max-width: $breakpoint) {
+            grid-template-columns: 1fr;
+        }
     }
     &.threeCol {
         grid-template-columns: 1fr 1fr 1fr;
+
+        small, strong {
+            display: block;
+        }
+
+        @media only screen and (max-width: $breakpoint) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &.full {
